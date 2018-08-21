@@ -82,7 +82,12 @@ Configure the Uncomplicated Firewall (UFW) to only allow incoming connections fo
  
 ## Install git, clone and setup your Catalog App project.
 * Install Git using `sudo apt-get install git`
-* project tree should be like :
+* project tree should be like this
+
+
+
+
+
 ![proect Tree](https://i.pinimg.com/originals/76/16/e3/7616e3356d08b233e8c3716b8bf8349b.png)
 * Clone the Catalog App to the virtual machine `git clone https://github.com/kongling893/Item_Catalog_UDACITY.git`
 * Rename the project's name `sudo mv ./Item_Catalog_UDACITY ./FlaskApp`
