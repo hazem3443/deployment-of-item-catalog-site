@@ -14,9 +14,13 @@ then type the **passphrase** :: **hazem**:raised_hands: then you will be prompet
 
 # How Did i Deployed this site :question::pray:
 ## First the Instructions for SSH access to the instance
-* first you need to install some packages such as those 'sudo apt-get install apache' 
 * create account on any web hosting service such as [Digital-Ocean](https://www.digitalocean.com/):muscle: or [AWS](https://aws.amazon.com/):clap:
 * then create a VPS with CLI access to enable you using command line with root access and password:skull:
+* then you need to install some packages such as those 
+`sudo apt-get update
+sudo apt-get install apache2`
+`sudo apt-get install libapache2-mod-wsgi python-dev`
+`sudo a2enmod wsgi `
 * first:ear: create a public and private keys using ssh key-gen tool with any command line interface such as Git or Powershell:nose:
 **Note**::trollface:
 private key shouldn't included but for evaluation i decided to attach it here
