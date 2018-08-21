@@ -67,7 +67,8 @@ Configure the Uncomplicated Firewall (UFW) to only allow incoming connections fo
 	```
 ** Set a password for user catalog which is **hazem123**:mega:
 	
-	```postgres=# ALTER ROLE catalog WITH PASSWORD 'hazem123';```:satellite:
+	`postgres=# ALTER ROLE catalog WITH PASSWORD 'hazem123';` 
+	:satellite:
 * Give user "catalog" permission to "catalog" application database:unlock:
 	
 	```
