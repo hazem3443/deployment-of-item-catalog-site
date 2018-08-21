@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 # import the setub file to load tables in order to write data
 from Database_Setup import Category, CategoryItem, User, Base
 # call the sqlite database file
-engine = create_engine('sqlite:///ItemsCatalogWithUsers.db')
+engine = create_engine('postgresql://catalog:hazem123@localhost/catalog')
 
 # Clear database from any data
 Base.metadata.drop_all(engine)
