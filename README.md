@@ -65,10 +65,10 @@ Configure the Uncomplicated Firewall (UFW) to only allow incoming connections fo
 	postgres=# CREATE DATABASE catalog;
 	postgres=# CREATE USER catalog;
 	```
-** Set a password for user catalog which is **hazem123**:mega:
+** Set a password for user catalog which is **hazem123**:mega::satellite:
 	
 	`postgres=# ALTER ROLE catalog WITH PASSWORD 'hazem123';` 
-	:satellite:
+	
 * Give user "catalog" permission to "catalog" application database:unlock:
 	
 	```
@@ -141,7 +141,7 @@ Configure the Uncomplicated Firewall (UFW) to only allow incoming connections fo
 	```
 
 ## Restart Apache:gem:
-* Restart Apache `sudo service apache2 restart ` :trophy:
+* Restart Apache:trophy: `sudo service apache2 restart `
 
 then go to browser and type [142.93.205.132](http://142.93.205.132) and let the magic happen
 
