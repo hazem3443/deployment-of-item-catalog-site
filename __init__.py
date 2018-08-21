@@ -19,7 +19,8 @@ from flask import jsonify, make_response, flash
 
 app = Flask(__name__)
 
-CLIENT_ID = json.loads(open('client_secrets.json',
+APP_PATH = '/var/www/FlaskApp/FlaskApp/'
+CLIENT_ID = json.loads(open(APP_PATH + 'client_secrets.json',
                             'r').read())['web']['client_id']
 
 APPLICATION_NAME = "Restaurant Menu Application"
