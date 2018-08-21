@@ -89,37 +89,33 @@ Configure the Uncomplicated Firewall (UFW) to only allow incoming connections fo
 
 
 ![proect Tree](https://i.pinimg.com/originals/76/16/e3/7616e3356d08b233e8c3716b8bf8349b.png)
-* Clone the Catalog App to the virtual machine `git clone https://github.com/kongling893/Item_Catalog_UDACITY.git`
-* Rename the project's name `sudo mv ./Item_Catalog_UDACITY ./FlaskApp`
-* Move to the inner FlaskApp directory using `cd FlaskApp`
+* Clone the Catalog to the Fist FlaskApp directoy and name it FlaskApp as the following ``` it clone https://github.com/hazemkhaledmohamed/Final-Project FlaskApp ```
 * Rename `website.py` to `__init__.py` using `sudo mv website.py __init__.py`
-* Edit `database_setup.py`, `website.py` and `functions_helper.py` and change `engine = create_engine('sqlite:///toyshop.db')` to `engine = create_engine('postgresql://catalog:password@localhost/catalog')`
 * Install pip `sudo apt-get install python-pip`
 * Use pip to install dependencies `sudo pip install -r requirements.txt`
 * Install psycopg2 `sudo apt-get -qqy install postgresql python-psycopg2`
 * Create database schema `sudo python database_setup.py`
 
 ## Configure and Enable a New Virtual Host
-1. Create FlaskApp.conf to edit: `sudo nano /etc/apache2/sites-available/FlaskApp.conf`
-2. Add the following lines of code to the file to configure the virtual host. 
-	
+* Create FlaskApp.conf to edit: `sudo nano /etc/apache2/sites-available/FlaskApp.conf`
+* Add the following lines of code to the file to configure the virtual host. 	
 	```
 	<VirtualHost *:80>
-		ServerName 52.24.125.52
-		ServerAdmin qiaowei8993@gmail.com
-		WSGIScriptAlias / /var/www/FlaskApp/flaskapp.wsgi
-		<Directory /var/www/FlaskApp/FlaskApp/>
-			Order allow,deny
-			Allow from all
-		</Directory>
-		Alias /static /var/www/FlaskApp/FlaskApp/static
-		<Directory /var/www/FlaskApp/FlaskApp/static/>
-			Order allow,deny
-			Allow from all
-		</Directory>
-		ErrorLog ${APACHE_LOG_DIR}/error.log
-		LogLevel warn
-		CustomLog ${APACHE_LOG_DIR}/access.log combined
+                ServerName 142.93.205.132
+                ServerAdmin 142.93.205.132
+                WSGIScriptAlias / /var/www/FlaskApp/flaskapp.wsgi
+                <Directory /var/www/FlaskApp/FlaskApp/>
+                        Order allow,deny
+                        Allow from all
+                </Directory>
+                Alias /static /var/www/FlaskApp/FlaskApp/static
+                <Directory /var/www/FlaskApp/FlaskApp/static/>
+                        Order allow,deny
+                        Allow from all
+                </Directory>
+                ErrorLog ${APACHE_LOG_DIR}/error.log
+                LogLevel warn
+                CustomLog ${APACHE_LOG_DIR}/access.log combined
 	</VirtualHost>
 	```
 3. Enable the virtual host with the following command: `sudo a2ensite FlaskApp`
@@ -141,57 +137,11 @@ Configure the Uncomplicated Firewall (UFW) to only allow incoming connections fo
 	sys.path.insert(0,"/var/www/FlaskApp/")
 
 	from FlaskApp import app as application
-	application.secret_key = 'Add your secret key'
+	application.secret_key = 'SUPER_SECRET_KEY'
 	```
 
 ## Restart Apache
 1. Restart Apache `sudo service apache2 restart `
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 then type the **passphrase** :: **hazem** then you will be prompeted to access the server's shell **CLI** (command line interface)
 # **you can follow these links to deploy your site i find it very usefull and helped me alot to deploy mine**
