@@ -1,4 +1,4 @@
-# :dizzy:final-project:sparkles:
+# :dizzy:APP-deployment:sparkles:
 this is a deployed version of **ITEM CATALOG**:cupid: App for the final evaluation grader has access with private key file **grader** to access the deployed **VPS** :broken_heart:
 
 # **Grader info**:boom:
